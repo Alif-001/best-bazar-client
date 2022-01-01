@@ -1,0 +1,23 @@
+/* // reset style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* // google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@500;700&family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Laila", sans-serif;
+  font-weight: 500;
+}

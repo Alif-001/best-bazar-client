@@ -1,0 +1,10 @@
+@mixin bestBazarButton {
+  background: $primary-color;
+  color: $white-color;
+  border: none;
+  &:hover {
+    background: $tertiary-color;
+    background: darken($color: $primary-color, $amount: 10);
+    color: $white-color;
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "chil-bazar-client",
+  "name": "best-bazar-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "react-scripts": "5.0.0",
     "react-toastify": "^8.1.0",
     "redux-persist": "^6.0.0",
+    "sass": "^1.45.2",
     "swiper": "^7.4.1",
     "web-vitals": "^2.1.0"
   },
