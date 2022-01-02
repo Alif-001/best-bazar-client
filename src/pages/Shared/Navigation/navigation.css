@@ -1,0 +1,16 @@
+
+.navLinks a{
+    text-decoration: none;
+    margin: 12px 10px 0px;
+    color: #5E2590;
+}
+.navLinks a:hover{
+    color: #558C8C;
+    border-bottom: 1px solid #558C8C;  
+}
+
+@media only screen and (min-width: 900px) {
+    .navLinks{
+        margin-left: 20px;
+    }
+  }
