@@ -1,0 +1,39 @@
+@import "./variables.scss";
+@import "./mixins";
+
+.title {
+  color: $primary-color;
+}
+
+.registration {
+  width: 50%;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    &:input {
+      padding: 5px;
+    }
+    button {
+      @include bestBazarButton;
+    }
+  }
+  a {
+    color: $secondary-color;
+    transition: $transition;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .registration {
+    width: 90%;
+  }
+}
