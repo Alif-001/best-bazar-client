@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AEOA,AAAA,OAAO,CAAC;EACN,YAAY,EAPE,OAAO;CAQtB;;AFND,AAAA,MAAM,CAAC;ECFL,UAAU,ECAI,OAAO;EDCrB,KAAK,ECEO,OAAO;EDDnB,MAAM,EAAE,IAAI;CDEb;;AAFD,ACCE,MDDI,ACCH,MAAM,CAAC;EACN,UAAU,ECAG,OAAO;EDCpB,UAAU,EAAE,OAA2C;EACvD,KAAK,ECHK,OAAO;CDIlB",
+    "sources": [
+        "global.scss",
+        "_mixins.scss",
+        "variables.scss"
+    ],
+    "names": [],
+    "file": "global.css"
+}
