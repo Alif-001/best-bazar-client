@@ -9,13 +9,13 @@ const Slider = () => {
         <img
           id="hero"
           className="d-block w-100 hero-img"
-          src="https://i.ibb.co/mvVj4T5/700302-generic-desktop-radeon-6700xt-transparent-1260x709.webp?fbclid=IwAR1W6qUqg0pnL-LWW_fKRK-5XVV25SmMo1HxYvzBnVP6IFrpI87RkeCdB7o"
+          src="https://i.ibb.co/hct083p/791f9298484ac6345007b9c7787423fb.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
-          <h1>Laptop & Desktop </h1>
-          <h3>SAVE UP TO 40%</h3>
-          <p>
+          <h1 className="text-dark">Laptop & Desktop </h1>
+          <h3 className="text-color">SAVE UP TO 40%</h3>
+          <p className="text-color">
             Our Assortment Of laptop & Desktop Are On Sale Now For Limited Time!
           </p>
           <Button className="shop-btn">Shop Now</Button>
@@ -24,28 +24,30 @@ const Slider = () => {
       <Carousel.Item>
         <img
           className="d-block w-100  hero-img"
-          src="https://i.ibb.co/JK1t3PC/b320e438631991-5769476692396.jpg?fbclid=IwAR3yA9mqrp_jJgpJx2u3rh1CDRED8oiCcSFh2IbZamQKZzB_8NOyrSsMx7Y"
+          src="https://i.ibb.co/MnpPy2J/laptop-nexcel-bahrain.jpg"
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h1>Luggage </h1>
-          <h3>SAVE UP TO 60%</h3>
-          <p>Our Assortment Of Luggage Are On Sale Now For Limited Time!</p>
+          <h1 className="text-dark">Laptop & Desktop </h1>
+          <h3 className="text-color">SAVE UP TO 60%</h3>
+          <p className="text-color">
+            Our Assortment Of Luggage Are On Sale Now For Limited Time!
+          </p>
           <Button className="shop-btn">Shop Now</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100  hero-img"
-          src="https://i.ibb.co/tLgbyvV/maxresdefault.jpg?fbclid=IwAR073buGlwx7LbYzPtoxh11DZNaYriShCqQCTAuJAiejx6xdaZZqTkJP7gM"
+          src="https://i.ibb.co/3RmjSCX/1602723506704.jpg"
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h1>Laptop & Desktop </h1>
-          <h3>SAVE UP TO 40%</h3>
-          <p>
+          <h1 className="text-dark">Laptop & Desktop </h1>
+          <h3 className="text-color">SAVE UP TO 40%</h3>
+          <p className="text-color">
             Our Assortment Of laptop & Desktop Are On Sale Now For Limited Time!
           </p>
           <Button className="shop-btn">Shop Now</Button>
