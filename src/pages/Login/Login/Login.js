@@ -2,13 +2,14 @@ import React from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import registerStyles from "../../../styles/Register.module.scss";
 
 const Login = () => {
   const { signInWithGoogle, handleEmailLogin } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const {
     register,
     handleSubmit,
@@ -16,9 +17,11 @@ const Login = () => {
   } = useForm();
   const onSubmit = (data) => {
     const { email, password } = data;
-    handleEmailLogin(email, password);
+    handleEmailLogin(email, password, navigate);
   };
-  console.log(errors);
+  const handleGoogleLogin = () => {
+    signInWithGoogle(location, navigate);
+  };
   return (
     <>
       <Container className="py-5 mb-5">
@@ -50,7 +53,7 @@ const Login = () => {
               Or sign in Using Google
             </p>
             <div className="text-center">
-              <Button onClick={signInWithGoogle} variant="text">
+              <Button onClick={handleGoogleLogin} variant="text">
                 {" "}
                 <FcGoogle className="fs-1" />
               </Button>

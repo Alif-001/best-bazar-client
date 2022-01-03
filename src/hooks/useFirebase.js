@@ -1,4 +1,3 @@
-import axios from "axios";
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -20,14 +19,14 @@ initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  //   const [admin, setAdmin] = useState(false);
+  // const [admin, setAdmin] = useState(false);
 
   // auth and provider
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
   // google sign in
-  const signInWithGoogle = () => {
+  const signInWithGoogle = (location, navigate) => {
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -36,8 +35,8 @@ const useFirebase = () => {
         // upsertUser(result?.user?.email, result?.user?.displayName);
 
         toast.success("Logged In Successfully");
-        // const destination = location?.state?.from || "/";
-        // navigate(destination);
+        const destination = location?.state?.from || "/";
+        navigate(destination);
       })
       .catch((error) => {
         toast.error(error.message);
@@ -46,7 +45,7 @@ const useFirebase = () => {
   };
 
   //   register new user
-  const handleEmailRegister = (name, email, password) => {
+  const handleEmailRegister = (name, email, password, navigate) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
@@ -59,7 +58,7 @@ const useFirebase = () => {
         })
           .then(() => {
             toast.success("Registered Successfully");
-            // navigate("/");
+            navigate("/");
           })
           .catch((error) => {
             toast.error(error.message);
@@ -71,14 +70,14 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
   // email login
-  const handleEmailLogin = (email, password) => {
+  const handleEmailLogin = (email, password, location, navigate) => {
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
         toast.success("Logged In Successfully");
-        // const destination = location?.state?.from || "/";
-        // navigate(destination);
+        const destination = location?.state?.from || "/";
+        navigate(destination);
       })
       .catch((error) => {
         toast.error(error.message);
@@ -113,9 +112,9 @@ const useFirebase = () => {
         setUser(user);
 
         // id token
-        // getIdToken(user).then((idToken) => {
-        //   localStorage.setItem("idToken", idToken);
-        // });
+        getIdToken(user).then((idToken) => {
+          localStorage.setItem("idToken", idToken);
+        });
       } else {
         setUser({});
       }
@@ -124,33 +123,33 @@ const useFirebase = () => {
   }, [auth]);
 
   // save user to database
-  //   const saveUser = (email, displayName) => {
-  //     const user = { email, displayName };
-  //     axios
-  //       .post("https://afternoon-tor-94038.herokuapp.com/users", user)
-  //       .then((result) => {});
-  //   };
+  // const saveUser = (email, displayName) => {
+  //   const user = { email, displayName };
+  //   axios
+  //     .post("https://afternoon-tor-94038.herokuapp.com/users", user)
+  //     .then((result) => {});
+  // };
 
-  //   const upsertUser = (email, displayName) => {
-  //     const user = { email, displayName };
-  //     axios
-  //       .put("https://afternoon-tor-94038.herokuapp.com/users", user)
-  //       .then((result) => {});
-  //   };
+  // const upsertUser = (email, displayName) => {
+  //   const user = { email, displayName };
+  //   axios
+  //     .put("https://afternoon-tor-94038.herokuapp.com/users", user)
+  //     .then((result) => {});
+  // };
 
   // admin check
-  //   useEffect(() => {
-  //     // setIsLoading(true);
-  //     axios({
-  //       method: "get",
-  //       url: `https://afternoon-tor-94038.herokuapp.com/users/${user?.email}`,
-  //       headers: {
-  //         Authorization: `Bearer ${localStorage.getItem("idToken")}`,
-  //       },
-  //     }).then((result) => {
-  //       setAdmin(result.data?.admin);
-  //       // setIsLoading(false);
-  //     });
+  // useEffect(() => {
+  //   // setIsLoading(true);
+  //   axios({
+  //     method: "get",
+  //     url: `https://afternoon-tor-94038.herokuapp.com/users/${user?.email}`,
+  //     headers: {
+  //       Authorization: `Bearer ${localStorage.getItem("idToken")}`,
+  //     },
+  //   }).then((result) => {
+  //     setAdmin(result.data?.admin);
+  //     // setIsLoading(false);
+  //   });
   // const checkAdmin = async () => {
 
   //   const res = await fetch(
@@ -166,7 +165,7 @@ const useFirebase = () => {
   //   setIsLoading(false);
   // };
   // checkAdmin();
-  //   }, [user?.email]);
+  // }, [user?.email]);
   return {
     handleEmailRegister,
     handleEmailLogin,

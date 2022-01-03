@@ -2,13 +2,15 @@ import React from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import useAuth from "../../../hooks/useAuth";
 import registerStyles from "../../../styles/Register.module.scss";
 
 const Registration = () => {
   const { handleEmailRegister, signInWithGoogle } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const {
     register,
@@ -21,9 +23,13 @@ const Registration = () => {
       toast.info("Password Is not matched");
       return;
     }
-    handleEmailRegister(userName, email, password);
+    handleEmailRegister(userName, email, password, navigate);
   };
-  console.log(errors);
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle(location, navigate);
+  };
+
   return (
     <>
       <Container className="py-5 mb-5">
@@ -65,7 +71,7 @@ const Registration = () => {
               Or sign in Using Google
             </p>
             <div className="text-center">
-              <Button onClick={signInWithGoogle} variant="text">
+              <Button onClick={handleGoogleLogin} variant="text">
                 {" "}
                 <FcGoogle className="fs-1" />
               </Button>
