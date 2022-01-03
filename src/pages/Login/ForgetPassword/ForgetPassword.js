@@ -36,7 +36,7 @@ const ForgetPassword = () => {
               {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
             />
 
-            <Button type="submit" variant="success">
+            <Button type="submit" variant="">
               Reset
             </Button>
           </form>

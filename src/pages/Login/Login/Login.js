@@ -44,7 +44,7 @@ const Login = () => {
               {...register("password", { required: true })}
             />
 
-            <Button type="submit" variant="success">
+            <Button type="submit" variant="">
               Login
             </Button>
           </form>

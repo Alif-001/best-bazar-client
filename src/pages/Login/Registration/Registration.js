@@ -62,7 +62,7 @@ const Registration = () => {
               {...register("reEnterPassword", { required: true })}
             />
 
-            <Button type="submit" variant="success">
+            <Button type="submit" variant="">
               Register
             </Button>
           </form>
