@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import registerStyles from "../../../styles/Register.module.scss";
+import Navigation from "../../Shared/Navigation/Navigation";
 
 const ForgetPassword = () => {
   const { handlePasswordReset } = useAuth();
@@ -21,6 +22,8 @@ const ForgetPassword = () => {
 
   return (
     <>
+      {/* navigation  */}
+      <Navigation />
       <Container className="py-5 mb-5">
         <h3 className={`${registerStyles.title} text-center mb-4`}>
           Please Login
