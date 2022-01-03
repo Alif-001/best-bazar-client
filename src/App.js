@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
 import Home from "./pages/Home/Home/Home";
+import ForgetPassword from "./pages/Login/ForgetPassword/ForgetPassword";
 import Login from "./pages/Login/Login/Login";
 import Registration from "./pages/Login/Registration/Registration";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
@@ -17,6 +18,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
+          <Route path="/forget-password" element={<ForgetPassword />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <ToastContainer

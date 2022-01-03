@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import registerStyles from "../../../styles/Register.module.scss";
+import Navigation from "../../Shared/Navigation/Navigation";
 
 const Login = () => {
   const { signInWithGoogle, handleEmailLogin } = useAuth();
@@ -24,6 +25,8 @@ const Login = () => {
   };
   return (
     <>
+      {/* navigation  */}
+      <Navigation />
       <Container className="py-5 mb-5">
         <h3 className={`${registerStyles.title} text-center mb-4`}>
           Please Login
@@ -45,11 +48,16 @@ const Login = () => {
               Login
             </Button>
           </form>
-          <p>
-            New user? <Link to="/register">Register here</Link>{" "}
-          </p>
+          <div className="d-flex justify-content-between my-3">
+            <p>
+              New user? <Link to="/register">Register here</Link>{" "}
+            </p>
+            <p>
+              <Link to="/forget-password">Forget Password?</Link>{" "}
+            </p>
+          </div>
           <div>
-            <p className="text-center border-bottom pb-1">
+            <p className="text-center border-bottom pb-3">
               Or sign in Using Google
             </p>
             <div className="text-center">

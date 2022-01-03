@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import useAuth from "../../../hooks/useAuth";
 import registerStyles from "../../../styles/Register.module.scss";
+import Navigation from "../../Shared/Navigation/Navigation";
 
 const Registration = () => {
   const { handleEmailRegister, signInWithGoogle } = useAuth();
@@ -32,6 +33,8 @@ const Registration = () => {
 
   return (
     <>
+      {/* navigation  */}
+      <Navigation />
       <Container className="py-5 mb-5">
         <h3 className={`${registerStyles.title} text-center mb-4`}>
           Registration
@@ -63,11 +66,11 @@ const Registration = () => {
               Register
             </Button>
           </form>
-          <p className="mt-2">
+          <p className="mt-3">
             Already registered? <Link to="/login">Login</Link>{" "}
           </p>
           <div>
-            <p className="text-center border-bottom pb-1">
+            <p className="text-center border-bottom pb-3">
               Or sign in Using Google
             </p>
             <div className="text-center">

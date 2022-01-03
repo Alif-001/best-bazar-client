@@ -85,10 +85,11 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
   // password reset
-  const handlePasswordReset = (email) => {
+  const handlePasswordReset = (email, navigate) => {
     sendPasswordResetEmail(auth, email)
       .then(() => {
         toast.info("Password reset email sent");
+        navigate("/");
       })
       .catch((error) => {
         toast.error(error.message);
