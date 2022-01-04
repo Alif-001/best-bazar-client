@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import { Container, Row, Spinner } from "react-bootstrap";
+import { Button, Container, Row, Spinner } from "react-bootstrap";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { fetchProducts } from "../../../redux/slices/productSlice";
 import shopStyles from "../../../styles/Shop.module.scss";
 import SingleProduct from "../../Shared/SingleProduct/SingleProduct";
@@ -15,6 +17,11 @@ const LatestProducts = () => {
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/shop");
+  };
 
   //   loading spinner
   // loading spinner
@@ -34,6 +41,16 @@ const LatestProducts = () => {
           <SingleProduct key={product._id} product={product} />
         ))}
       </Row>
+      <div className="d-flex justify-content-center text-center mt-4">
+        <Button
+          onClick={handleClick}
+          variant=""
+          className="d-flex align-items-center gap-2"
+        >
+          View all groceries
+          <AiOutlineArrowRight />
+        </Button>
+      </div>
     </Container>
   );
 };

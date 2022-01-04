@@ -9,6 +9,9 @@
     font-size: $font-title-size;
     margin-bottom: 30px;
   }
+  button {
+    @include bestBazarButton;
+  }
 }
 
 .card {
