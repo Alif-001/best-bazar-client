@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Container, Pagination, Row } from "react-bootstrap";
+import { Container, Pagination, Row, Spinner } from "react-bootstrap";
 import shopStyles from "../../styles/Shop.module.scss";
 import Navigation from "../Shared/Navigation/Navigation";
 import SingleProduct from "../Shared/SingleProduct/SingleProduct";
@@ -15,16 +15,6 @@ const Shop = () => {
   // useEffect(() => {
   //   dispatch(fetchProducts());
   // }, [dispatch]);
-
-  //   loading spinner
-  // loading spinner
-  // if (bestBazarProducts.status === "pending") {
-  //   return (
-  //     <div className="text-center py-2">
-  //       <Spinner animation="border" />
-  //     </div>
-  //   );
-  // }
 
   //
 
@@ -49,6 +39,15 @@ const Shop = () => {
       setIsLoading(false);
     });
   }, [page]);
+
+  //   loading spinner
+  if (isLoading) {
+    return (
+      <div className="text-center py-2">
+        <Spinner animation="border" />
+      </div>
+    );
+  }
 
   return (
     <div>
