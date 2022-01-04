@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 import NewsLetter from "../../Shared/NewsLetter/NewsLetter";
 import LatestProducts from "../LatestProducts/LatestProducts";
@@ -16,8 +15,6 @@ const Home = () => {
       <LatestProducts />
       {/* NewsLetter */}
       <NewsLetter />
-      {/* footer  */}
-      <Footer />
     </div>
   );
 };

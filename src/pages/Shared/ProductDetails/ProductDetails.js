@@ -28,7 +28,7 @@ const ProductDetails = () => {
     <>
       {/* navigation  */}
       <Navigation />
-      <Container className={`${shopStyles.productDetails} py-5`}>
+      <Container className={`${shopStyles.productDetails} py-5 mt-5`}>
         <div className="w-75 mx-auto">
           <Card className={`${shopStyles.card} h-100 p-1`}>
             <Card.Img

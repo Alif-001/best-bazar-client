@@ -30,7 +30,7 @@ const Shop = () => {
     <div>
       {/* navigation  */}
       <Navigation />
-      <Container className={`${shopStyles.shop} py-5`}>
+      <Container className={`${shopStyles.shop} py-5 mt-5`}>
         <h1 className="text-center">Shop</h1>
         <Row xs={1} md={2} lg={3} className="g-4">
           {products.map((product) => (
