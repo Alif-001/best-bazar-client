@@ -26,7 +26,7 @@ const Checkout = () => {
   const { cartItems, totalPrice } = useSelector((state) => state.productCart);
   const dispatch = useDispatch();
   const orderedItemsId = cartItems?.map((item) => item._id);
-  const orderedItemsName = cartItems?.map((item) => item.name);
+  const orderedItemsName = cartItems?.map((item) => item.title);
 
   const onSubmit = (data) => {
     const { userName, email, phone, address, zipCode, city, notes } = data;
