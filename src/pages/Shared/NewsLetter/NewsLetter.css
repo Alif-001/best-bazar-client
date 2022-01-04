@@ -1,0 +1,37 @@
+#news-input {
+  border-radius: 50px !important;
+  padding: 12px 40px;
+  line-height: 27.8px;
+  border: 2px solid #5e2590;
+}
+#form {
+  margin: 30px 0 20px;
+  width: 400px;
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+}
+.signup-btn {
+  background-color: #000000;
+  color: #ffffff;
+  position: absolute;
+  right: 80px;
+  top: 6px;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0 5px 2px 0;
+  text-align: center;
+  text-indent: 5px;
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid #aa5bee;
+}
+
+.newsLetter {
+  background-image: url("https://i.ibb.co/K95Bct8/h7-banner4.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  object-fit: cover !important;
+  background-size: 100% 100%;
+}

@@ -1,0 +1,16 @@
+:export {
+  primaryColor: #5e2590;
+}
+
+button {
+  background: #5e2590;
+  color: #f9fbf2;
+  border: none;
+}
+
+button:hover {
+  background: #558c8c;
+  background: #441b67;
+  color: #f9fbf2;
+}
+/*# sourceMappingURL=global.css.map */
