@@ -3,12 +3,8 @@ import { Col, Container, Row } from "react-bootstrap";
 import logo from "../../../images/logo.png";
 const Footer = () => {
   return (
-    <>
-      <Container
-        bg="light"
-        fluid="md"
-        className="pt-4 d-flex justify-content-center"
-      >
+    <div className="bg-light">
+      <Container className="pt-4 d-flex justify-content-center bg-light">
         <Row>
           <Col xs={12} md="auto">
             {" "}
@@ -35,7 +31,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 
