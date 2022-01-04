@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { Container, Spinner } from "react-bootstrap";
+import { Container, Row, Spinner } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../redux/slices/productSlice";
 import shopStyles from "../../../styles/Shop.module.scss";
+import SingleProduct from "../../Shared/SingleProduct/SingleProduct";
 
 const LatestProducts = () => {
   // get products form redux store
@@ -28,6 +29,11 @@ const LatestProducts = () => {
   return (
     <Container className={`${shopStyles.latestProducts} py-5`}>
       <h2>Latest Products {products.length} </h2>
+      <Row xs={1} md={2} lg={3} className="g-4">
+        {products.slice(12, 18).map((product) => (
+          <SingleProduct key={product._id} product={product} />
+        ))}
+      </Row>
     </Container>
   );
 };
