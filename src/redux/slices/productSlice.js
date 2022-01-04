@@ -20,10 +20,21 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
+// export const fetchProductsWithPagination = createAsyncThunk(
+//   "products/fetchProductsWithPagination",
+//   async (page, size) => {
+//     const response = await axios.get(
+//       `https://frozen-falls-23301.herokuapp.com/allProducts?page=${page}&&size=${size}`
+//     );
+//     return response.data;
+//   }
+// );
+
 const productSlice = createSlice({
   name: "product",
   initialState: {
     products: [],
+    allProducts: [],
   },
   reducers: {
     // addToCart: (state, { payload }) => {
@@ -44,6 +55,14 @@ const productSlice = createSlice({
     builder.addCase(fetchProducts.pending, (state, action) => {
       state.status = "pending";
     });
+
+    // builder.addCase(fetchProductsWithPagination.fulfilled, (state, action) => {
+    //   state.allProducts = action.payload;
+    //   state.status = "success";
+    // });
+    // builder.addCase(fetchProductsWithPagination.pending, (state, action) => {
+    //   state.status = "pending";
+    // });
   },
 });
 

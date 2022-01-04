@@ -62,19 +62,21 @@ const Shop = () => {
           ))}
         </Row>
         {/* pagination  */}
-        <Pagination>
-          <Pagination.Prev />
-          {[...Array(pageCount).keys()].map((number) => (
-            <Pagination.Item
-              className={number === page ? "selected" : ""}
-              key={number}
-              onClick={() => setPage(number)}
-            >
-              {number + 1}
-            </Pagination.Item>
-          ))}
-          <Pagination.Next />
-        </Pagination>
+        <div className="d-flex justify-content-center mt-4">
+          <Pagination>
+            <Pagination.Prev />
+            {[...Array(pageCount).keys()].map((number) => (
+              <Pagination.Item
+                className={number === page ? "selected" : ""}
+                key={number}
+                onClick={() => setPage(number)}
+              >
+                {number + 1}
+              </Pagination.Item>
+            ))}
+            <Pagination.Next />
+          </Pagination>
+        </div>
       </Container>
     </div>
   );

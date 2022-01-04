@@ -27,7 +27,7 @@ const SingleProduct = ({ product }) => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <h3>$ {price}</h3>
-          <Card.Text>{description.slice(0, 100)}...</Card.Text>
+          <Card.Text>{description?.slice(0, 100)}...</Card.Text>
           <div className="d-flex justify-content-between">
             <Rating
               className="mb-3"

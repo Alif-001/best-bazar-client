@@ -30,7 +30,7 @@ const LatestProducts = () => {
     <Container className={`${shopStyles.latestProducts} py-5`}>
       <h2>Latest Products </h2>
       <Row xs={1} md={2} lg={3} className="g-4">
-        {products.slice(12, 18).map((product) => (
+        {products?.slice(12, 18).map((product) => (
           <SingleProduct key={product._id} product={product} />
         ))}
       </Row>
