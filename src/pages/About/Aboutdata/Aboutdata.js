@@ -2,7 +2,7 @@ import React from "react";
 
 const Aboutdata = () => {
   return (
-    <div className="container text-center">
+    <div className="container text-center py-5 mt-5">
       <div className="my-5">
         <h1>About Us</h1>
         <p className="p-5">
