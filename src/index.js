@@ -1,15 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import persistStore from "redux-persist/es/persistStore";
+import { PersistGate } from "redux-persist/integration/react";
 import App from "./App";
 import AuthProvider from "./context/AuthProvider";
 import "./index.css";
+import store from "./redux/store";
 import reportWebVitals from "./reportWebVitals";
+
+let persistor = persistStore(store);
 
 ReactDOM.render(
   <React.StrictMode>
-    <AuthProvider>
-      <App />
-    </AuthProvider>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

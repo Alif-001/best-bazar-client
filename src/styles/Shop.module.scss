@@ -1,0 +1,12 @@
+@import "./mixins";
+@import "./variables.scss";
+
+.latestProducts {
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    font-weight: 700;
+    font-size: $font-title-size;
+    margin-bottom: 30px;
+  }
+}
