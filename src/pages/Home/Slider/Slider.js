@@ -5,7 +5,7 @@ import "./Slider.css";
 
 const Slider = () => {
   return (
-    <Carousel fade controls={false} indicators={false} interval={2500}>
+    <Carousel fade controls={false} indicators={false} interval={5000}>
       <Carousel.Item>
         <img
           id="hero"
