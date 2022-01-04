@@ -123,50 +123,6 @@ const useFirebase = () => {
     });
   }, [auth]);
 
-  // save user to database
-  // const saveUser = (email, displayName) => {
-  //   const user = { email, displayName };
-  //   axios
-  //     .post("https://afternoon-tor-94038.herokuapp.com/users", user)
-  //     .then((result) => {});
-  // };
-
-  // const upsertUser = (email, displayName) => {
-  //   const user = { email, displayName };
-  //   axios
-  //     .put("https://afternoon-tor-94038.herokuapp.com/users", user)
-  //     .then((result) => {});
-  // };
-
-  // admin check
-  // useEffect(() => {
-  //   // setIsLoading(true);
-  //   axios({
-  //     method: "get",
-  //     url: `https://afternoon-tor-94038.herokuapp.com/users/${user?.email}`,
-  //     headers: {
-  //       Authorization: `Bearer ${localStorage.getItem("idToken")}`,
-  //     },
-  //   }).then((result) => {
-  //     setAdmin(result.data?.admin);
-  //     // setIsLoading(false);
-  //   });
-  // const checkAdmin = async () => {
-
-  //   const res = await fetch(
-  //     `https://afternoon-tor-94038.herokuapp.com/users/${user?.email}`,
-  //     {
-  //       headers: {
-  //         authorization: `Bearer ${localStorage.getItem("idToken")}`,
-  //       },
-  //     }
-  //   );
-  //   const data = await res.json();
-  //   setAdmin(data.admin);
-  //   setIsLoading(false);
-  // };
-  // checkAdmin();
-  // }, [user?.email]);
   return {
     handleEmailRegister,
     handleEmailLogin,
