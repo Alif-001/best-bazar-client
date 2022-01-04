@@ -9,10 +9,9 @@ const cartSlice = createSlice({
   reducers: {
     addToCart: (state, { payload }) => {
       state.cartItems.push(payload);
-      state.totalPrice = state.cartItems.reduce(
-        (pre, current) => pre + current.price,
-        0
-      );
+      state.totalPrice = state.cartItems
+        .reduce((pre, current) => pre + current.price, 0)
+        .toFixed(2);
     },
     discountedPrice: (state, { payload }) => {
       state.totalPrice = state.totalPrice - payload;

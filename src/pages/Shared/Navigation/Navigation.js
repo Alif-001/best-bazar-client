@@ -4,8 +4,10 @@ import { NavLink } from "react-router-dom";
 import "./navigation.css";
 import logo from "../../../images/logo.png";
 import { FiShoppingCart } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 const Navigation = () => {
+  const { cartItems } = useSelector((state) => state.productCart);
   return (
     <div>
       <Navbar bg="light" expand="lg">
@@ -40,9 +42,9 @@ const Navigation = () => {
               style={{}}
               navbarScroll
             >
-              <NavLink to="/cart">
+              <NavLink className="cart-icon" to="/cart">
                 <FiShoppingCart className="fs-4" />
-                <span>0</span>
+                <span>{cartItems.length}</span>
               </NavLink>
               <NavLink to="/login">Login</NavLink>
             </Nav>

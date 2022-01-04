@@ -1,16 +1,24 @@
-
-.navLinks a{
-    text-decoration: none;
-    margin: 12px 10px 0px;
-    color: #5E2590;
+.navLinks a {
+  text-decoration: none;
+  margin: 12px 10px 0px;
+  color: #5e2590;
 }
-.navLinks a:hover{
-    color: #558C8C;
-    border-bottom: 1px solid #558C8C;  
+.navLinks a:hover {
+  color: #558c8c;
+}
+
+.cart-icon {
+  position: relative;
+}
+.cart-icon span {
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  background: #fff;
 }
 
 @media only screen and (min-width: 900px) {
-    .navLinks{
-        margin-left: 20px;
-    }
+  .navLinks {
+    margin-left: 20px;
   }
+}
