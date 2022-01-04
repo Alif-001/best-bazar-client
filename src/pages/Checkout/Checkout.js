@@ -29,7 +29,6 @@ const Checkout = () => {
   const orderedItemsName = cartItems?.map((item) => item.title);
 
   const onSubmit = (data) => {
-    const { userName, email, phone, address, zipCode, city, notes } = data;
     data.orderedItems = {
       orderedItemsId,
       orderedItemsName,

@@ -20,6 +20,7 @@
   - Product Details
   - Cart,
   - Checkout
+  - My Account
   - Authentication,
   - redux work
 
