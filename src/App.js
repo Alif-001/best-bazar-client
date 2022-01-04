@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.scss";
 import Cart from "./pages/Cart/Cart";
+import Checkout from "./pages/Checkout/Checkout";
 import Home from "./pages/Home/Home/Home";
 import ForgetPassword from "./pages/Login/ForgetPassword/ForgetPassword";
 import Login from "./pages/Login/Login/Login";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/forget-password" element={<ForgetPassword />} />

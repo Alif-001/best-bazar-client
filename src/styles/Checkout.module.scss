@@ -1,0 +1,49 @@
+@import "./mixins";
+@import "./variables.scss";
+
+.checkoutContainer {
+  h1 {
+    text-align: center;
+    color: $primary-color;
+    font-weight: 700;
+    font-size: $font-big-size;
+    margin-bottom: 30px;
+  }
+  width: 50%;
+
+  .checkout {
+    padding: 30px;
+    border-radius: 10px;
+    form {
+      display: flex;
+      flex-direction: column;
+
+      gap: 20px;
+
+      &:input {
+        padding: 5px;
+      }
+      button {
+        @include bestBazarButton;
+      }
+    }
+    a {
+      color: $secondary-color;
+      transition: $transition;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    h3 {
+      text-align: center;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .checkoutContainer {
+    width: 90%;
+  }
+}
