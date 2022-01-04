@@ -23,6 +23,7 @@
   - My Account
   - Authentication,
   - redux work
+  - Pagination
 
 ### [Md Omor Faruk Alif](https://github.com/Alif-001)
 
