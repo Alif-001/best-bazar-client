@@ -10,6 +10,7 @@ import ForgetPassword from "./pages/Login/ForgetPassword/ForgetPassword";
 import Login from "./pages/Login/Login/Login";
 import Registration from "./pages/Login/Registration/Registration";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
+import Shop from "./pages/Shop/Shop";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contactus />} />
           <Route path="/login" element={<Login />} />
