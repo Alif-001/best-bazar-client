@@ -10,7 +10,7 @@ const Navigation = () => {
   const { cartItems } = useSelector((state) => state.productCart);
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar sticky="top" bg="light" expand="lg">
         <Container>
           <NavLink to="/">
             {" "}

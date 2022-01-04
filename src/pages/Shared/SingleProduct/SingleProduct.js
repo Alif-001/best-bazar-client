@@ -5,14 +5,20 @@ import { FaUserAlt } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import Rating from "react-rating";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { addToCart } from "../../../redux/slices/cartSlice";
 import shopStyles from "../../../styles/Shop.module.scss";
 
 const SingleProduct = ({ product }) => {
-  const { title, img, description, rating, price, review } = product;
+  const { _id, title, img, description, rating, price, review } = product;
   const dispatch = useDispatch();
   const handleCart = () => {
     dispatch(addToCart(product));
+  };
+
+  const navigate = useNavigate();
+  const handleClick = (id) => {
+    navigate(`/shop/product/${id}`);
   };
   return (
     <Col className="">
@@ -50,7 +56,9 @@ const SingleProduct = ({ product }) => {
               Add to Cart
               <FiShoppingCart className="ms-2" />
             </Button>
-            <Button variant="text">View Details</Button>
+            <Button onClick={() => handleClick(_id)} variant="text">
+              View Details
+            </Button>
           </div>
         </Card.Footer>
       </Card>
