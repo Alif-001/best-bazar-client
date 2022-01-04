@@ -24,3 +24,34 @@ h6 {
 .text-color {
   color: #4c0070;
 }
+.contact-btn {
+  background-color: #4c0070;
+  border: #4c0070;
+}
+
+.contact-btn:hover {
+  background-color: #9717d3;
+}
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #4c0070;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(185, 13, 253, 0.25);
+}
+.page-not-found {
+  font-size: 15rem;
+}
+.btn-check:active + .btn-primary,
+.btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #4c0070;
+  border-color: #4c0070;
+}
+primary:active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(219, 49, 253, 0.5);
+}
