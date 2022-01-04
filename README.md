@@ -10,41 +10,49 @@
 
 ## _contributors_
 
-1. [Md Omor Faruk Alif](https://github.com/Alif-001)
+### [Suhag Al Amin](https://github.com/developer-suhag)
 
-   - role:
-     - frontend
-     - created api,
-     - slider,
-     - newsletter,
-     - about page,
-     - contact page,
-     - footer,
-     - 404 page,
-     - animation.
-     - Shop layout.
+- role:
+  - Front End,
+  - Backend,
+  - products on home page,
+  - shop page,
+  - Product Details
+  - Cart,
+  - Checkout
+  - Authentication,
+  - redux work
 
-2. [Suhag Al Amin](https://github.com/developer-suhag)
+### [Md Omor Faruk Alif](https://github.com/Alif-001)
 
-   - role:
-     - backend,
-     - shop page,
-     - products on home page,
-     - Authentication,
-     - redux work
+- role:
+  - frontend
+  - created api,
+  - slider,
+  - newsletter,
+  - about page,
+  - contact page,
+  - footer,
+  - 404 page,
+  - animation.
 
-3. [Abdur Rahman](https://github.com/9Abdurrahman2020)
-   - role:
-     - navbar
+### [Abdur Rahman](https://github.com/9Abdurrahman2020)
+
+- role:
+  - navbar
 
 ---
 
 ### Technology used
 
 1. react
-2. sass
-3. redux
+2. redux
+3. sass
 4. react-revel
-5. mongodb
-6. firebase
-7. express
+5. Node.js
+6. express
+7. mongodb
+8. firebase
+9. React Bootstrap
+10. React Hook Form
+11. Redux persist

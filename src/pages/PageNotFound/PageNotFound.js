@@ -7,7 +7,7 @@ const PageNotFound = () => {
   return (
     <div>
       <Navigation />
-      <div className=" text-center p-3 ">
+      <div className=" text-center p-3 py-5 mt-5">
         <h1 className="page-not-found text-color">404</h1>
         <h3>Oops! That page can't be found.</h3>
         <h4>
