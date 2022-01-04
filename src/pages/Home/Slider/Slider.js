@@ -1,10 +1,11 @@
 import React from "react";
 import { Button, Carousel } from "react-bootstrap";
+import Fade from "react-reveal/Fade";
 import "./Slider.css";
 
 const Slider = () => {
   return (
-    <Carousel fade controls={false} indicators={false} interval={1500}>
+    <Carousel fade controls={false} indicators={false} interval={5000}>
       <Carousel.Item>
         <img
           id="hero"
@@ -13,12 +14,17 @@ const Slider = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h1 className="text-dark">Laptop & Desktop </h1>
-          <h3 className="text-color">SAVE UP TO 40%</h3>
-          <p className="text-color">
-            Our Assortment Of laptop & Desktop Are On Sale Now For Limited Time!
-          </p>
-          <Button className="shop-btn">Shop Now</Button>
+          <div>
+            <Fade right big cascade>
+              <h1 className="text-dark">Laptop & Desktop </h1>
+              <h3 className="text-color">SAVE UP TO 40%</h3>
+              <p className="text-color">
+                Our Assortment Of laptop & Desktop Are On Sale Now For Limited
+                Time!
+              </p>
+              <Button className="shop-btn">Shop Now</Button>
+            </Fade>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -29,12 +35,17 @@ const Slider = () => {
         />
 
         <Carousel.Caption>
-          <h1 className="text-dark">Laptop & Desktop </h1>
-          <h3 className="text-color">SAVE UP TO 60%</h3>
-          <p className="text-color">
-            Our Assortment Of Luggage Are On Sale Now For Limited Time!
-          </p>
-          <Button className="shop-btn">Shop Now</Button>
+          <div>
+            <Fade top big cascade>
+              <h1 className="text-dark">Laptop & Desktop </h1>
+              <h3 className="text-color">SAVE UP TO 40%</h3>
+              <p className="text-color">
+                Our Assortment Of laptop & Desktop Are On Sale Now For Limited
+                Time!
+              </p>
+              <Button className="shop-btn">Shop Now</Button>
+            </Fade>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -45,12 +56,17 @@ const Slider = () => {
         />
 
         <Carousel.Caption>
-          <h1 className="text-dark">Laptop & Desktop </h1>
-          <h3 className="text-color">SAVE UP TO 40%</h3>
-          <p className="text-color">
-            Our Assortment Of laptop & Desktop Are On Sale Now For Limited Time!
-          </p>
-          <Button className="shop-btn">Shop Now</Button>
+          <div className="">
+            <Fade left big cascade>
+              <h1 className="text-dark">Laptop & Desktop </h1>
+              <h3 className="text-color">SAVE UP TO 40%</h3>
+              <p className="text-color">
+                Our Assortment Of laptop & Desktop Are On Sale Now For Limited
+                Time!
+              </p>
+              <Button className="shop-btn">Shop Now</Button>
+            </Fade>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
